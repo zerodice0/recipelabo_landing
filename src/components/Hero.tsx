@@ -1,4 +1,5 @@
 import { Language, translations } from '@/lib/translations'
+import Image from 'next/image'
 
 interface HeroProps {
   language: Language;
@@ -16,6 +17,15 @@ export default function Hero({ language }: HeroProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="space-y-8">
           <div className="space-y-4">
+            <div className="mb-8">
+              <Image
+                src="/recipe_labo.svg" 
+                alt="Recipe Labo Logo" 
+                width={128}
+                height={128}
+                className="mx-auto mb-6"
+              />
+            </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900">
               <span className="block">{t.hero.title}</span>
               <span className="block text-orange-500">{t.hero.titleAccent}</span>
